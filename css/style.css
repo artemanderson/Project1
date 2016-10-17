@@ -1,0 +1,257 @@
+*{
+	margin: 0 auto;
+}
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+}
+
+#header{
+	height: 100%;
+	text-align: center;
+	color: white;
+	font-family: 'Abhaya Libre', serif;
+	background: url(../images/background1.jpg) fixed;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	z-index: 2;
+	float: center;
+}
+
+h1{
+	font-size: 8em;
+	font-weight: 100;
+	position: relative;
+}
+
+h3{
+	font-size: 2em;
+	font-weight: 400;
+	font-family: 'Open Sans',sans-serif;
+	padding-top: 160px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+hr{
+	border: solid white 1px;
+	width: 60%;
+	float: center;
+	-webkit-animation: hr_slide 3s forwards;
+	-moz-animation: hr_slide 3s forwards;
+}
+
+hr.slider{
+	width: 92%;
+	-webkit-animation: none;
+	-moz-animation: none;
+}
+
+#swordleft{
+	height: 10%;
+	width: 20%;
+	background-image: url(../images/sword2.png);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	left: 5%;
+	top: -16.5%;
+	float: left;
+	opacity: 0;
+	-webkit-animation: l_slide 3s forwards;
+	-moz-animation: l_slide 3s forwards;
+}
+
+#swordright{
+	height: 10%;
+	width: 20%;
+	background-image: url(../images/sword2.png);
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	right: 5%;
+	top: -16.5%;
+	opacity: 0;
+	float: right;
+	-webkit-animation: r_slide 3s forwards;
+	-moz-animation: r_slide 3s forwards;
+}
+
+#slide{
+	height: 0;
+	margin-top: -75px;
+	margin-bottom: 90px;
+}
+
+#slideimage{
+	width: 100vw;
+}
+
+#info{
+	height: 90%;
+	background: url(../images/painting.jpg) fixed;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	-webkit-background-size: 150% 150% cover;
+	-moz-background-size: 150% 150% cover;
+	text-align: left;
+	color: white;
+	z-index: 2;
+	padding-top: 15%;
+}
+
+#info:hover #text{
+	-webkit-animation: text_drop 1s forwards;
+	-moz-animation: text_drop 1s forwards;
+}
+
+#info:hover #flourish{
+	-webkit-animation: reveal 3s forwards;
+	-moz-animaiton: reveal 3s forwards;
+}
+
+#text {
+	background-color: rgba(0,0,0,.5);
+	height: 50%;
+	width: 80%;
+	margin-top: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	z-index: 3;
+	position: relative;
+	opacity: 0;
+	float: center;
+}
+
+h2{
+	font-family: 'Abhaya Libre', serif;
+	font-weight: 300;
+	font-size: 5em;
+	position: relative;
+	text-align: center;
+}
+
+p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+	width: 90%;
+	margin-bottom: 2%;
+	position: relative;
+	line-height: 26px;
+}
+
+ul{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+li{
+	width: 12.5%;
+	font-size: 1.5em;
+	font-weight: 900;
+	font-family: 'Open Sans', sans-serif;
+	display: inline-block;
+}
+
+#flourish{
+	float: center;
+	margin-top: 5%;
+	width: 0%;
+	opacity: 0;
+	height: 20%;
+	background-image: url(../images/flourish.png);
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+/* ANIMATION KEYFRAMES */
+
+@-webkit-keyframes hr_slide {
+	0% {width: 0;}
+	100% {width: 60%;}
+}
+
+@-webkit-keyframes l_slide {
+	0% { left: -30%; opacity: 0;}
+	100% { left: 7.5%; opacity: 1; }
+}
+
+@-webkit-keyframes r_slide {
+	0% { right: -30%; opacity: 0;}
+	100% { right: 7.5%; opacity: 1; }
+}
+
+@-webkit-keyframes text_drop {
+	0% {top: -50px; opacity: 0;}
+	100% {top: 0px; opacity: 1;}
+}
+
+@-webkit-keyframes reveal {
+	0% {width: 0%; opacity: 1;}
+	100% {width: 80%; opacity: 1;}
+}
+
+/* SCREEN SIZES */
+
+@media only screen and (max-width: 1300px) {
+h1 {font-size:6.5em;}
+h3 {font-size:2em; }
+h2 {font-size: 4.5em;}
+#swordleft, #swordright {top: -14.5%;}
+
+}
+
+@media only screen and (max-width: 1100px) {
+h1 {font-size:5.25em;}
+h3 {font-size:2em;}
+h2 {font-size: 3.5em;}
+#swordleft, #swordright {top: -12%;}
+}
+
+@media only screen and (max-width: 900px) {
+h1 {font-size:4.5em;}
+h3 {font-size:2em;}
+h2 {font-size: 3em;}
+p {font-size: 1.25em;}
+#swordleft, #swordright {top: -11.5%;}
+}
+
+@media only screen and (max-width: 700px) {
+h1 {font-size:3.5em;}
+h3 {font-size:1.5em;}
+#swordleft, #swordright {top: -10%;}
+}
+
+@media only screen and (max-width: 550px) {
+h1 {font-size:2.5em;}
+h3 {font-size:1em;}
+h2 {font-size: 2.5em;}
+p {font-size: 1em;}
+li {font-size: 1.1em;}
+#swordleft, #swordright {top: -8.5%;}
+}
+
+@media only screen and (max-width: 320px) {
+h1 {font-size:2em;}
+h3 {font-size:.5em;}
+}
+
